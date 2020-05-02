@@ -57,22 +57,22 @@ def accessDB(dblocation):
         res = c.execute("SELECT name FROM sqlite_master WHERE type='table';")
         print("Available tables:",res.fetchall())
         
-        choice = giveOptions()
         oneMoTime = 'y'
         while oneMoTime == 'y':
+            choice = giveOptions()
             if choice == 'add new item to assets':
-                addNewItem(conn)
+                addNewItems(conn)
                 
             if choice == 'record a sale':
                 recordSale(conn)
                 
             if choice == 'mark items arrived':
-                pass
+                markArrived(conn)
                 
             if choice == 'query':
                 repeatQuery(conn)
-            oneMoTime = askAgain("\n\t Would you like to perform another operation? (y/n): ")
-            
+            oneMoTime = askAgain(input("\n\t Would you like to perform another operation? (y/n): "))
+
         conn.close()
         print("\tDB connection closed")
         
@@ -237,7 +237,7 @@ def markArrived(conn, table='enRoute'):
         resp = input("\tWould you like to [select] or [type] sold item?: ")
         
    if resp == 'select':
-        options = c.execute("SELECT Item FROM %s" %table).fetchall()
+        options = c.execute("SELECT Item FROM %s" %table ).fetchall()
         item = giveOptions(options)[0]
    if resp == 'type':
         itemLike = input("which item got sold (ie Castelli aero bib): ").strip()
@@ -246,7 +246,7 @@ def markArrived(conn, table='enRoute'):
         item = giveOptions(options)[0]
    
    # get stuff from enRoute table
-   enRoute = pd.read_sql("SELECT %s FROM enRoute INNER JOIN assets USING(itemID) WHERE Item == '%s';" %(",".join(['enRoute.'+s for s in sizeCols + ['itemID']]),item),conn)
+   enRoute = pd.read_sql("SELECT %s FROM enRoute WHERE Item == '%s';" %(",".join(sizeCols),item),conn)
    
    # get stuff from assets table
    assets = pd.read_sql("SELECT %s FROM assets WHERE Item == '%s';" %(",".join(sizeCols),item),conn)
@@ -262,7 +262,7 @@ def markArrived(conn, table='enRoute'):
    c.execute(query)
    print('updated inventory in assets')
    
-   c.execute("DELETE FROM enRoute WHERE itemID = %d;" %enRoute.itemID)
+   c.execute("DELETE FROM enRoute WHERE item = '%s';" %item)
    print("updated inventory in enRoute items")
    
    conn.commit()
