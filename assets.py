@@ -297,8 +297,6 @@ def queryDB(query, conn):
     if toPrint == 'y':
         print(df.head(n=10))
     return(df)
-
-    
     
 def toSaveCSV(df):    
     toCSV = askAgain(input("Save query to csv? Type y or n: "))
