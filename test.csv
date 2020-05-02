@@ -1,0 +1,63 @@
+,Item,Description,count,XXS,XS,S,M,L,XL,XXL,XXXL,gender,MTB,retail_price,team_price,team_discount,not4sale,item_type,en_route,itemID
+0,Grey Nike hoodies,"Zip up, standard fit Nike Golf (bit long). $55",19.0,0,0,0,3,5,5,6,0,,0,55.0,55.0,0,0,hoodie,0,0
+1,Dri-fit dark grey v necks unisex,"Short sleeve, seems large for sizes. $30",10.0,0,0,3,3,0,0,4,0,,0,30.0,30.0,0,0,tshirt,0,1
+2,Dri-fit light grey v necks womens,"Short sleeve, seems large for sizes. $30",18.0,0,0,0,8,10,0,0,0,women,0,30.0,30.0,0,0,tshirt,0,2
+3,Red graffiti text shirts,,8.0,0,0,0,5,1,0,2,0,,0,20.0,20.0,0,0,tshirt,0,3
+4,2019 Pedal Mafia Core Jersey M,,3.0,0,0,0,2,1,0,0,0,male,0,90.0,55.0,1,0,jersey,1,4
+5,2019 Pedal Mafia Tech Jersey M,,1.0,0,0,1,0,0,0,0,0,male,0,115.0,90.0,1,0,jersey,1,5
+6,2019 Pedal Mafia Core Jersey W,,2.0,0,0,1,1,0,0,0,0,women,0,90.0,55.0,1,0,jersey,1,6
+7,2019 Pedal Mafia Tech Jersey W,,4.0,0,0,2,2,0,0,0,0,women,0,115.0,90.0,1,0,jersey,0,7
+8,2019 Pedal Mafia Core bib M,,1.0,0,0,0,1,0,0,0,0,male,0,130.0,72.0,1,0,bibs,1,8
+9,2019 Pedal Mafia Tech bib M,,1.0,0,0,1,0,0,0,0,0,male,0,140.0,105.0,1,0,bibs,1,9
+10,2019 Pedal Mafia Tech bib W,,3.0,0,0,1,1,1,0,0,0,women,0,140.0,105.0,1,0,bibs,0,10
+11,2019 Pedal Mafia MTB Jersey unisex,,1.0,0,0,1,0,0,0,0,0,,1,90.0,55.0,1,0,jersey,1,11
+12,2018 Castelli training jersey M,,9.0,0,0,1,6,0,1,0,1,male,0,90.0,60.0,1,0,jersey,0,12
+13,2018 Castelli aero jersey M,,2.0,0,0,0,2,0,0,0,0,male,0,109.0,90.0,1,0,jersey,0,13
+14,2018 Castelli training jersey W,,7.0,0,1,2,2,2,0,0,0,women,0,90.0,60.0,1,0,jersey,0,14
+15,2018 Castelli aero jersey W,,10.0,0,0,3,3,2,1,1,0,women,0,109.0,90.0,1,0,jersey,0,15
+16,2018 Castelli MTB jersey,,3.0,0,0,0,1,1,1,0,0,,1,90.0,60.0,1,0,jersey,0,16
+17,2018 Castelli jacket,,4.0,0,0,1,0,1,2,0,0,,0,155.0,140.0,1,0,jacket,0,17
+18,2018 Castelli lighter vest,,4.0,0,0,0,1,1,1,1,0,,0,95.0,68.0,1,0,vest,0,18
+19,2018 Castelli training bib M,,0.0,0,0,0,0,0,0,0,0,male,0,130.0,79.0,1,0,bibs,0,19
+20,2018 Castelli aero bib M,,2.0,0,0,1,0,0,0,1,0,male,0,140.0,110.0,1,0,bibs,0,20
+21,2018 Castelli training bib W,,7.0,0,0,1,2,1,1,1,1,women,0,,,0,1,bibs,0,21
+22,2018 Castelli aero bib W,,3.0,0,0,1,1,1,0,0,0,women,0,,,0,1,bibs,0,22
+23,2018 Castelli training short W,,2.0,0,0,1,0,1,0,0,0,women,0,80.0,65.0,1,0,bibs,0,23
+24,2018 Castelli tech tee M,,8.0,0,0,2,3,1,1,1,0,male,0,45.0,36.0,1,0,tshirt,0,24
+25,2018 Castelli tech tee W,,8.0,0,1,2,2,2,1,0,0,women,0,,,0,1,tshirt,0,25
+26,2018 grey Thermoflex armwarmers,,5.0,0,1,1,1,0,2,0,0,,0,35.0,35.0,0,0,armwarmers,0,26
+27,2018 grey Lycra armwarmers,,7.0,0,0,2,1,2,2,0,0,,0,25.0,25.0,0,0,armwarmers,0,27
+28,2018 Castelli Cycling cap,,22.0,22,0,0,0,0,0,0,0,,0,20.0,20.0,0,0,cap,0,28
+29,2017 white Castelli aero jersey W,,1.0,0,0,0,0,1,0,0,0,women,0,119.0,90.0,1,0,jersey,0,29
+30,2017 white Castelli training jersey W,,1.0,0,0,0,1,0,0,0,0,women,0,85.0,55.0,1,0,jersey,0,30
+31,2017 white Castelli training jersey M,,1.0,0,0,0,0,0,0,1,0,women,0,85.0,55.0,1,0,jersey,0,31
+32,2017 white Castelli tech shirt M,,1.0,0,0,0,1,0,0,0,0,women,0,40.0,35.0,1,0,tshirt,0,32
+33,2017 white Castelli aero bib W,,1.0,0,0,1,0,0,0,0,0,women,0,139.0,110.0,1,0,bibs,0,33
+34,2017 white Castelli training bib M,,1.0,0,0,0,0,0,1,0,0,women,0,,,0,1,bibs,0,34
+35,2017 white Castelli training bib W,,4.0,0,0,1,2,0,1,0,0,women,0,129.0,85.0,1,0,bibs,0,35
+36,2017 Castelli rain jacket,,3.0,0,0,1,1,1,0,0,0,,0,160.0,135.0,1,0,jacket,0,36
+37,2017 Castelli wind vest,,2.0,0,0,0,0,0,1,1,0,women,0,109.0,90.0,1,0,vest,0,37
+38,2017 Castelli aero socks,,2.0,0,0,2,0,0,0,0,0,,0,23.0,23.0,0,0,socks,0,38
+39,2015 red Capo jersey ,,9.0,4,2,0,0,0,3,0,0,,0,75.0,75.0,0,0,cap,0,39
+40,2015 red Capo bib ,,13.0,1,3,2,0,0,5,2,0,,0,100.0,100.0,0,0,cap,0,40
+41,2015 red Capo vest ,,11.0,1,1,2,1,4,1,1,0,,0,65.0,65.0,0,0,cap,0,41
+42,2014 black Capo jersey,,2.0,0,1,0,0,0,1,0,0,,0,,,0,1,cap,0,42
+43,2014 black Capo bib,,5.0,1,0,0,1,1,2,0,0,,0,,,0,1,cap,0,43
+44,2014 black Capo vest,,1.0,0,0,0,0,0,1,0,0,,0,,,0,1,cap,0,44
+45,2013 black Endo bib,,2.0,0,2,0,0,0,0,0,0,,0,,,0,1,bibs,0,45
+46,2013 black Endo vest,,2.0,0,0,0,0,0,1,1,0,,0,,,0,1,vest,0,46
+47,2013 black Endo undershirt,,1.0,0,0,0,0,0,0,1,0,,0,,,0,1,tshirt,0,47
+48,2012 white Pissei jersey,,2.0,0,0,2,0,0,0,0,0,women,0,,,0,1,jersey,0,48
+49,2012 white Pissei bib,,1.0,0,0,0,1,0,0,0,0,women,0,,,0,1,bibs,0,49
+50,???? Black Pissei jersey,,1.0,0,0,0,0,0,0,1,0,,0,,,0,1,jersey,0,50
+51,Black Mechanix gloves,,1.0,0,1,0,0,0,0,0,0,,0,,,0,1,gloves,0,51
+52,White Mechanix gloves ,,2.0,0,0,0,2,0,0,0,0,,0,,,0,1,gloves,0,52
+53,Water bottles,"Basic Camelbak, USC Cycling branded",102.0,0,0,0,0,0,0,0,0,,0,,,0,1,water bottle,0,53
+54,Full bike sticker set,"USC/Cannondale/Helen's, black from Stasis",3.0,0,0,0,0,0,0,0,0,,0,,,0,1,wheels,0,54
+55,Helen's cycles bike stickers,"Small, from Stasis",8.0,0,0,0,0,0,0,0,0,,0,,,0,1,stickers,0,55
+56,Flat pedals,Bought at JRLA to put on 52 for newbies,1.0,0,0,0,0,0,0,0,0,,0,,,0,1,pedals,0,56
+57,Helen's Cycles bag,Black string bag,1.0,0,0,0,0,0,0,0,0,,0,,,0,1,bag,0,57
+58,Shimano rim set,Bought at Helen's during 54 check up early 2018,1.0,0,0,0,0,0,0,0,0,,0,,,0,1,wheels,0,58
+59,Mavic rim set,"Original rims on 54, replaced w/ Shimano. Serviceable but bumpy",1.0,0,0,0,0,0,0,0,0,,0,,,0,1,wheels,0,59
+60,Cannondale Cad10,Have a 52 and 54 remaining,0.0,0,0,0,0,0,0,0,0,,0,,,0,1,bike,0,60
+61,Pedal Mafia tote bags,To give to our riders,30.0,0,0,0,0,0,0,0,0,,0,,,0,1,bag,0,61
