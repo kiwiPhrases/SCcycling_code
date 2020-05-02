@@ -35,5 +35,7 @@ I took SC Cycling's Assets.xlsx (April 2020) and dumped it to a database. Hopefu
 Things I'd like to add: 
 
 a) Adding a graphical interfact would probably help some users
+
 b) Either lock database with a password or move it to password-protected area
+
 c) Switch from sqlite3 to another database platform that can be hosted online
