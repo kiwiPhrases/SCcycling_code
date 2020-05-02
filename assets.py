@@ -27,7 +27,7 @@ def askAgain(response):
         response = input("Type y or n: ")
     return(response)
     
-def giveOptions(options = ['add new item to assets', 'record a sale', 'mark items arrived', 'query']):
+def giveOptions(options = ['add new item to assets', 'record a sale', 'mark items arrived','mark item en route','query']):
     print("Options:")
     for i,s in enumerate(options):
         print('\t',i, s)
@@ -68,6 +68,9 @@ def accessDB(dblocation):
                 
             if choice == 'mark items arrived':
                 markArrived(conn)
+                
+            if choice == 'mark item en route':
+                enterEnRoute(conn)
                 
             if choice == 'query':
                 repeatQuery(conn)
@@ -226,12 +229,48 @@ def recordSale(conn):
     
        othersize = askAgain(input("\n\tWant to update other sizes? (y/n): ")) 
 
+def enterEnRoute(conn, table='assets'):
+   numericFields = ['XXS','XS','S','M','L','XL','XXL','XXXL','count']
+   sizeCols = numericFields[:8]
+   c = conn.cursor()
+   
+   resp = input("Would you like to [select] or [type] item?: ")
+   while resp not in ['select', 'type']:
+        print("Valid inputs: select or type...")
+        resp = input("\tWould you like to [select] or [type] item?: ")
+        
+   if resp == 'select':
+        options = c.execute("SELECT Item FROM %s" %table ).fetchall()
+        item = giveOptions(options)[0]
+   if resp == 'type':
+        itemLike = input("Type the Item here (ie Castelli aero bib): ").strip()
+        options = c.execute("SELECT Item FROM {0} WHERE Item LIKE '%{1}%'".format(table,itemLike)).fetchall()
+        print('Which of these did you want?')
+        item = giveOptions(options)[0]
+        
+   print("\n Let's put in the quantities that are en route...")
+   dataDict = {}
+   #sizeOrCount = askAgain(input("\t Are there different sizes? (y/n)"))
+   #if sizeOrCount == 'y':
+   for f in sizeCols:
+        dataDict[f] = check4numeric(f,sizeCols)
+   #if sizeOrCount == 'n':
+   #    dataDict['count'] = check4numeric('count', ['count'])
+       
+   print("\n Insert values into enRoute")    
+   keys = dataDict.keys()    
+   query = """INSERT INTO enRoute ({0})
+      VALUES({1}); """.format(",".join(keys), ",".join([dataDict[key] for key in keys]) )
+   c.execute(query)
+   conn.commit()
+   print("\t\t Done")
+   
 def markArrived(conn, table='enRoute'):
    numericFields = ['XXS','XS','S','M','L','XL','XXL','XXXL','count']
    sizeCols = numericFields[:8]
    c = conn.cursor()
    
-   resp = input("Would you like to [select] or [type] sold item?: ")
+   resp = input("Would you like to [select] or [type] item?: ")
    while resp not in ['select', 'type']:
         print("Valid inputs: select or type...")
         resp = input("\tWould you like to [select] or [type] sold item?: ")
