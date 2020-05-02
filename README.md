@@ -21,10 +21,12 @@ The database contains 3 tables:
 
 You can do numerous things using the assets program. You can:
 
+
 1) add new items to the assets table (ie new uniform orders or socks)
 2) record sales (it'll update our inventory and sales table)
-3) you can add items from the assets table into the enRoute table to mark something that'll arrive to our inventory
-4) you can move items from the enRoute table to the assets table to make things that were in transit and arrived. 
+3) add items from the assets table into the enRoute table to mark something that'll arrive to our inventory
+4) move items from the enRoute table to the assets table to make things that were in transit and arrived. 
+5) check inventory for particular items
 
 # Background:
 

@@ -27,7 +27,7 @@ def askAgain(response):
         response = input("Type y or n: ")
     return(response)
     
-def giveOptions(options = ['add new item to assets', 'record a sale', 'mark items arrived','mark item en route','query']):
+def giveOptions(options = ['check inventory','add new item to assets', 'record a sale', 'mark items arrived','mark item en route','query']):
     print("Options:")
     for i,s in enumerate(options):
         print('\t',i, s)
@@ -60,6 +60,9 @@ def accessDB(dblocation):
         oneMoTime = 'y'
         while oneMoTime == 'y':
             choice = giveOptions()
+            if choice == 'check inventory':
+                checkInventory(conn)
+            
             if choice == 'add new item to assets':
                 addNewItems(conn)
                 
@@ -94,6 +97,28 @@ def check4numeric(f, NF):
             resp = input("%s: " %f).strip()
     return(resp)
     
+def checkInventory(conn):
+   numericFields = ['XXS','XS','S','M','L','XL','XXL','XXXL','count', 'retail_price', 'team_price']
+   #sizeCols = numericFields[:9]
+   c = conn.cursor()
+   print("\n Let's check the quantity of a particular item")
+   resp = input("Would you like to [select] or [type] desired item?: ")
+   while resp not in ['select', 'type']:
+        print("Valid inputs: select or type...")
+        resp = input("\tWould you like to [select] or [type] sold item?: ")
+        
+   if resp == 'select':
+        options = c.execute("SELECT Item FROM assets").fetchall()
+        item = giveOptions(options)[0]
+   if resp == 'type':
+        itemLike = input("Type Item name (ie Castelli aero bib): ").strip()
+        options = c.execute("SELECT Item FROM assets WHERE Item LIKE '%{}%'".format(itemLike)).fetchall()
+        print('These were found, which of these did you want?')
+        item = giveOptions(options)[0]
+        
+   out = pd.read_sql("SELECT {0} FROM assets WHERE Item LIKE '%{1}%'".format(",".join(numericFields),item), conn)
+   print(out)
+
 def addNewItems(conn, table = 'assets'):
    print("Fill out each of the fields.")
    print("For sizes and prices, please type numbers (including 0)")
