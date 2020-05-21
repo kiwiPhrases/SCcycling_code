@@ -1,6 +1,6 @@
 # Introduction
 
-This repository contains a database of USC Cycling Club inventory and a program called `assets.py` to operate it. Easiest way to run the program is to open up your shell, go to the directory where the repo was cloned, and type 
+This repository contains an SQlite ddatabase of USC Cycling Club's inventory and a program called `assets.py` to operate it. Since the app is command-line based, the easiest way to run the program is to open up your shell, go to the directory where the repo was cloned, and type 
 
 `python assets.py`
 
@@ -30,7 +30,7 @@ You can do numerous things using the assets program. You can:
 
 # Background:
 
-I took SC Cycling's Assets.xlsx (April 2020) and dumped it to a database. Hopefully, this will make it easier for us to keep track of our inventory and also make it easier for us to record changes. Feel free to send me bugs or feature suggestions. 
+I took SC Cycling's Assets.xlsx (April 2020) and dumped it to a database. Hopefully, this will make it easier for us to keep track of our inventory and also make it easier for us to record changes. Feel free to send me bugs or feature suggestions. This app is now outdated since we have an online-app for inventory management and use. 
 
 # To add:
 
