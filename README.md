@@ -8,6 +8,9 @@ Should run seamlessly provided you have Numpy, Pandas, and sqlite3 modules.
 
 Don't forget to pull updates before running the program and push once you're done. 
 
+# -- UPDATE (Sept, 2020)
+Ever since SC Cycling's assets and store were launched on [Heroku](https://sccycling-merch.herokuapp.com/) this code became obsolete). As a result, it became just a general SC Cycling upload-repo to which I upload code that is not related to the webste. In particular, this pertains to the **IMLeauges Scraper** files. One is a notebook and the other is a runable python program. 
+
 
 # Tables:
 
